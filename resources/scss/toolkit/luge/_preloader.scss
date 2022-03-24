@@ -1,0 +1,63 @@
+/* Preloader */
+.lg-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: white;
+  opacity: 1;
+  z-index: 999;
+
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+/* Lottie */
+.lg-preloader--lottie {
+  background: none;
+}
+
+/* Fade */
+.lg-preloader--fade {
+  transition: opacity 0.3s linear;
+}
+
+/* Slide */
+.lg-preloader--slide,
+.lg-preloader--slide-to-top,
+.lg-preloader--slide-to-right,
+.lg-preloader--slide-to-bottom,
+.lg-preloader--slide-to-left {
+  transition: transform 0.5s ease(in-out-cubic);
+
+  &.is-hidden {
+    opacity: 1;
+  }
+}
+
+.lg-preloader--slide-to-right {
+  &.is-hidden {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.lg-preloader--slide-to-left {
+  &.is-hidden {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.lg-preloader--slide-to-top {
+  &.is-hidden {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.lg-preloader--slide-to-bottom {
+  &.is-hidden {
+    transform: translate3d(0, 100%, 0);
+  }
+}

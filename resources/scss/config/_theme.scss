@@ -1,0 +1,12 @@
+@use "../toolkit/accoutrement/sass/tools";
+
+$color-scheme: (
+   "bg" : _slate(9),
+   "body" : var(--gradient-16),
+   "text" : _slate(4),
+   "heading" : _slate(8)
+);
+
+:where(html) {
+   @include tools.custom-props($color-scheme, 'color-');
+}

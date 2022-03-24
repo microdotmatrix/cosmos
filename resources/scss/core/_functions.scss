@@ -1,0 +1,35 @@
+// Palette Selector 
+
+@function palette($colorMap, $shade) { 
+   
+   @if map-has-key($colorMap, $shade) {
+      $shade: map-get($colorMap, $shade);
+   } @else {
+      @if type-of($shade) != colour {
+         @error "Invalid colour name: `#{$shade}`.";
+      }
+   }
+   
+   @return $shade;
+}
+
+// Social Media Color Map Function stolen from Spice Sass...
+
+@function socialMedia($platform) { 
+   
+   @if map-has-key($social-colors, $platform) {
+      $platform: map-get($social-colors, $platform);
+   } @else {
+      @if type-of($platform) != colour {
+         @error "Invalid colour name: `#{$platform}`.";
+      }
+   }
+   
+   @return $platform;
+}
+
+// A quick shorthand function for tweaking the size of a set variable using calc( $variable * x % ) ...useful for setting font sizes of headings and such that are scaled mathematically without altering the scaling.
+
+@function _vp($variable, $percent) {
+   @return calc($variable + $percent);
+}

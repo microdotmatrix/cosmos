@@ -1,0 +1,24 @@
+img {
+   display: block;
+   position: relative;
+   max-width: 100%;
+   height: auto;
+   margin: 0;
+   padding: 0;
+}
+
+figure {
+   display: inline-block;
+   position: relative;
+   overflow: hidden;
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+figcaption {
+   display: block;
+   position: absolute;
+}

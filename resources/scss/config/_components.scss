@@ -1,0 +1,15 @@
+@use "../toolkit/accoutrement/sass/tools";
+// ---------
+// Component Properties
+// ---------
+
+
+// Buttons
+$buttons: (
+   "bg" : rgba(_slate(9), 0.4),
+   "border" : currentColor
+);
+
+:where(html) {
+   @include tools.custom-props($buttons, 'button-');
+}

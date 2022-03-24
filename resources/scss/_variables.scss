@@ -1,0 +1,105 @@
+// Breakpoints
+$bp-xs: 32rem !default; // 512px
+$bp-sm: 48rem !default; // 768px
+$bp-md: 64rem !default; // 1024px
+$bp-lg: 80rem !default; // 1280px
+$bp-xl: 90rem !default; // 1440px
+
+$map-for-breakpoints: (
+  "xsmall": 0,
+  "small": 768px,
+  "medium": 1024px,
+  "large": 1280px,
+  "xlarge": 1440px,
+);
+
+// Import Colors and other functions used by global variables
+@import "config/color";
+@import "config/fonts";
+@import "config/easing";
+
+@import "config/theme";
+@import "config/spacing";
+@import "config/text";
+@import "config/components";
+
+@import "helpers/social-colors";
+
+
+
+// Global Variables
+$base-url:            "http://localhost/iso";
+
+$phi:                 1.618; // Golden Ratio
+$e:                   2.71828; // Euler's Constant
+$pi:                  3.14159; // Pi
+$golden:              $phi;
+
+$content-width:       var(--content-width);
+$spacing-unit:        var(--space-phi) !default;
+$spacing-unit-2:      var(--space-e);
+$spacing-unit-3:      var(--space-pi);
+
+$space-phi:           var(--space-phi);
+$space-e:             var(--space-e);
+$space-pi:            var(--space-pi);
+
+$grey1:             #2e3338;
+$grey2:             #171a1c;
+
+$body-bg:             var(--color-body);
+
+// Fonts
+$kanit:               'Kanit', sans-serif;
+$prompt:              'Prompt', sans-serif;
+$bakbak:              'BakBak One', sans-serif;
+$advent:              'Advent Pro', sans-serif;
+$abel:                'Abel', sans-serif;
+
+$text-root__size:     112.8%;
+$text-root__line:     1.618rem;
+$text-color:          var(--color-text);
+$text-font:           $kanit;
+$text-size:           var(--base);
+$text-weight:         200;
+$text-line:           1.618rem;
+$p:                   var(--p);
+$sm:                  var(--sm);
+$md:                  var(--md);
+$lg:                  var(--lg);
+$xl:                  var(--xl);
+$xxl:                 var(--xxl);
+$xxxl:                var(--xxxl);
+
+
+$h-color:             var(--color-heading);
+$h1:                  var(--h1);
+$h2:                  var(--h2);
+$h3:                  var(--h3);
+$h4:                  var(--h4);
+$h5:                  var(--h5);
+
+$sf-1:                var(--size-fluid-1);
+$sf-2:                var(--size-fluid-2);
+$sf-3:                var(--size-fluid-3);
+$sf-4:                var(--size-fluid-4);
+$sf-5:                var(--size-fluid-5);
+$sf-6:                var(--size-fluid-6);
+
+$a:                   _slate(5);
+$a--hover:            _slate(3);
+
+$btn-bg:              var(--button-bg);
+$btn-border:          var(--button-border);
+
+$nav-a__py:           1rem;
+$nav-a__px:           0.5rem;
+$nav-a__size:         $md;
+$nav-a__color:        ocCyan(4);
+
+$header-pt:           var(--header-pt);
+$header-pb:           var(--header-pb);
+$header-bg__color:    _slate(8);
+
+$footer-pt:           var(--footer-pt);
+$footer-pb:           var(--footer-pb);

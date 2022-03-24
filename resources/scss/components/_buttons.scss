@@ -1,0 +1,21 @@
+button {
+   display: block;
+   border: 1px solid $btn-border;
+   background: $btn-bg;
+   color: currentColor;
+   outline: none;
+   margin: 0;
+   padding: calc($space-phi / $pi);
+   width: fit-content;
+}
+
+.theme-switch {
+   @include sizer(3rem);
+   border-radius: 50%;
+   display: grid;
+   place-content: center;
+   > svg {
+      width: 100%;
+      height: 100%;
+   }
+}

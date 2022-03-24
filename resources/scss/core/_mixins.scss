@@ -1,0 +1,25 @@
+// Reset Heading Tag Styles
+
+@mixin h-reset($font-size: $base, $margin-top: 0.8rem) {
+   h1, h2, h3, h4, h5, h6 {
+      font-size: $font-size;
+      font-weight: 400;
+      margin-top: $margin-top;
+      display: inline-block;
+   }
+}
+
+// Center Content using Margin: auto L+R
+
+@mixin mx-auto {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+ }

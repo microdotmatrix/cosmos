@@ -1,0 +1,42 @@
+:root {
+   --slate-100: #FCFEFF;
+   --slate-200: #E7F1FA;
+   --slate-300: #D4E0E9;
+   --slate-400: #C0CFDF;
+   --slate-500: #727C8B;
+   --slate-600: #546071;
+   --slate-700: #3C4655;
+   --slate-800: #181B20;
+   --slate-900: #09090B;
+}
+
+
+//  Gray
+//  ───────────────────────────────────
+
+$slate-list: (
+   "1": #FCFEFF,
+   "2": #E7F1FA,
+   "3": #D4E0E9,
+   "4": #C0CFDF,
+   "5": #727C8B,
+   "6": #546071,
+   "7": #3C4655,
+   "8": #181B20,
+   "9": #09090B
+);
+
+// Palette Selector 
+
+@function _slate($shade) { 
+   
+   @if map-has-key($slate-list, #{$shade}) {
+      $shade: map-get($slate-list, #{$shade});
+   } @else {
+      @if type-of($shade) != colour {
+         @error "Invalid colour name: `#{$shade}`.";
+      }
+   }
+   
+   @return $shade;
+}

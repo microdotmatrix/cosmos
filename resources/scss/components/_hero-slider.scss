@@ -1,0 +1,213 @@
+/***********************
+*	Variables
+**********************/
+
+$font-size:               $p;
+$heading-size:            $lg;
+
+$color-body:              #282828;
+$color-text:              #e2e2e2;
+$color-link:              #80a1c1;
+$color-link-active:       #6386a9;
+
+$variable-skewX:          18deg;
+$variable-vHForSkewX:     32.5vh;
+$variable-scrollingTime:  1350ms;
+
+.slider-pages {
+	overflow: hidden;
+	position: relative;
+
+	height:   70vh;
+}
+
+.slider-page {
+	position:   absolute;
+
+	top:        0;
+	width:      50%;
+	height:     70vh;
+
+	transition: transform $variable-scrollingTime;
+	&--skew {
+		overflow:   hidden;
+		position:   absolute;
+
+		top:        0;
+		width:      140%;
+		height:     100%;
+
+		background: var(--gradient-29);
+
+		transform:  skewX($variable-skewX * -1);
+	}
+	&--left {
+		width: 40%;
+
+		left:       0;
+		transform:  translateX($variable-vHForSkewX * -1)
+						translateY(100%)
+						translateZ(0);
+		.slider-page--skew {
+			left:     -40%;
+		}
+		.slider-page__content {
+			padding: 			auto 20% auto 20%;
+			transform-origin: 100% 0;
+		}
+	}
+	&--right {
+		width: 60%;
+
+		left:       40%;
+		transform:  translateX($variable-vHForSkewX)
+						translateY(-100%)
+						translateZ(0);
+		.slider-page--skew {
+			right:    -40%;
+		}
+		.slider-page__content {
+			padding:          auto 20% auto 20%;
+			transform-origin: 0 100%;
+		}
+	}
+	&__content {
+		position:         absolute;
+
+		display:          flex;
+		justify-content:  center;
+		align-items:      center;
+		flex-flow:        column wrap;
+
+		top:      0;
+		left:     0;
+		width:    100%;
+		height:   100%;
+		padding:  0 25% 0 20%;
+
+		color:            $color-text;
+		background-size:  cover;
+
+		transform:  skewX($variable-skewX);
+		transition: transform $variable-scrollingTime;
+	}
+	&__title {
+		margin-bottom: 1em;
+
+		font-size:  $heading-size;
+		text-align: center;
+
+		text-transform: uppercase;
+		&--big {
+			font-size:  $xxl;
+		}
+	}
+	&__description {
+		font-size:  $font-size;
+		text-align: center;
+	}
+	&__link {
+		color:      $color-link;
+
+		&:hover,
+		&:focus {
+			color:            $color-link-active;
+			text-decoration:  none;
+		}
+	}
+}
+
+
+/***********************
+*	Project JS Styles
+**********************/
+.js-scrolling__page {
+	position:   absolute;
+
+	top:        0;
+	left:       0;
+	width:      100%;
+}
+
+.js-scrolling--active {
+
+	.slider-page {
+		transform:  translateX(0)
+		translateY(0)
+		translateZ(0);
+	}
+}
+
+.js-scrolling--inactive {
+
+	.slider-page__content {
+		transform:  skewX($variable-skewX)
+		scale(.9);
+	}
+}
+
+.js-scrolling__page-1 {
+
+	.slider-page--left .slider-page__content {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/originals/a6/6a/a3/a66aa3134eb9f439838e676297a75bd6.jpg");
+	}
+
+	.slider-page--right .slider-page__content {
+		background-color: var(--gradient-10);
+	}
+}
+
+.js-scrolling__page-2 {
+
+	.slider-page--left .slider-page__content {
+		background-color: ocGray(8);
+	}
+	.slider-page--left .slider-page__title,
+	.slider-page--left .slider-page__description {
+		color:            $color-body;
+	}
+
+	.slider-page--right .slider-page__content {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/originals/7a/8d/51/7a8d51f4968960334274ac7959d31a7d.jpg");
+	}
+}
+
+.js-scrolling__page-3 {
+
+	.slider-page--left .slider-page__content {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/originals/4c/d8/7b/4cd87bc93cca92f76285c061cef16585.jpg");
+	}
+
+	.slider-page--right .slider-page__content {
+		background-color: $color-body;
+	}
+}
+
+:where(html) {
+	--doda-bg1: url('http://unsplash.it/1600/1200?random&gravity=center');
+}
+
+.doda {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 80vh;
+	overflow: hidden;
+	background-color: ocGray(9);
+	&__bg {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	&__heading {
+		position: absolute;
+		z-index: 2;
+		top: 33%;
+		left: 13%;
+
+	}
+}

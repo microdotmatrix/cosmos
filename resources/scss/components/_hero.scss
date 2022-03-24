@@ -1,0 +1,34 @@
+.hero {
+   display: flex;
+   align-items: center;
+   padding: #{$pi}rem 0;
+   // background: ocGray(8);
+	position: relative;
+	height: 80vh;
+	overflow: hidden;
+   &__wrapper {
+		position: absolute;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   &__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   &__image {
+      position: relative;
+      overflow: hidden;
+      // clip-path: polygon(16% 0, 100% 16%, 95% 88%, 0% 100%);
+      clip-path: polygon(0% 16%, 100% 0%, 100% 100%, 0 94%);
+      > img {
+         object-fit: cover;
+      }
+   }
+	> img {
+		max-width: 100%;
+		width: 100%;
+		object-fit: cover;
+
+	}
+}
