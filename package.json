@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@waaark/luge": "^0.6.7-beta",
+        "jarallax": "^2.0.2",
         "swiper": "^8.0.7"
     }
 }

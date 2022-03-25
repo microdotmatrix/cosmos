@@ -1,38 +1,80 @@
 .hero {
-   display: flex;
-   align-items: center;
-   padding: #{$pi}rem 0;
-   // background: ocGray(8);
+	display: none;
+	align-items: center;
+	padding: #{$pi}rem 0;
 	position: relative;
+	background: _slate(6);
 	height: 80vh;
 	overflow: hidden;
-   &__wrapper {
+	&__wrapper {
 		flex-wrap: wrap;
-      align-items: center;
-   }
-   &__content {
-		position: absolute;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-		> h1 {
+		align-items: center;
+	}
+	&__content {
+		position: relative;
+		width: 100%;
+		h1 {
 			font-family: $unifraktur;
 			margin-left: $space-phi;
 		}
-   }
-   &__image {
-      position: relative;
-      overflow: hidden;
-      // clip-path: polygon(16% 0, 100% 16%, 95% 88%, 0% 100%);
-      clip-path: polygon(0% 16%, 100% 0%, 100% 100%, 0 94%);
-      > img {
-         object-fit: cover;
-      }
-   }
+	}
+	&__image {
+		position: relative;
+		overflow: hidden;
+		// clip-path: polygon(16% 0, 100% 16%, 95% 88%, 0% 100%);
+		clip-path: polygon(0% 16%, 100% 0%, 100% 100%, 0 94%);
+		> img {
+			object-fit: cover;
+		}
+	}
 	> img {
 		max-width: 100%;
 		width: 100%;
 		object-fit: cover;
 
+	}
+}
+
+.swiper {
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	@include loadify(0.5s, 1.25s);
+	.swiper-slide {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.parallax-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 130%;
+		height: 130%;
+		-webkit-background-size: cover;
+		background-size: 100%;
+		background-position: 0 0;
+	}
+}
+
+.slide__box {
+	@include loadify(1s, 0.75s);
+	padding: $space-e $space-phi;
+	p {
+		font-family: $uni-sans;
+	}
+}
+
+.slide__image {
+	position: relative;
+	overflow: hidden;
+	clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+	@include loadify(1.4s, 0.75s);
+	> img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+		transform-style: preserve-3d;
 	}
 }

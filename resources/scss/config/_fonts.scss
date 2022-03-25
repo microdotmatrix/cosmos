@@ -11,3 +11,6 @@
 // font-family: 'Unica One', cursive;
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 // font-family: 'UnifrakturMaguntia', cursive;
+@include font-face('Uni Sans', '/fonts/uni-sans/UniSansThin', normal, 400, woff2 woff);
+@include font-face('Uni Sans Heavy', '/fonts/uni-sans/UniSansHeavy', normal, 800, woff2 woff);
+@include font-face('Lighters', '/fonts/lighters/lighters-demo', normal, 400, woff2 woff);

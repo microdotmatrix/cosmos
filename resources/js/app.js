@@ -7,28 +7,31 @@ window.$ = window.jQuery = $;
 import { gsap } from 'gsap';
 
 // Import Luge (Transition, Loading and Parallax FX)
-import { luge } from '@waaark/luge';
+// import { luge } from '@waaark/luge';
+
+import { jarallax } from "jarallax";
+
+jarallax(document.querySelectorAll(".jarallax"));
 
 // import Swiper JS
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper from 'swiper/bundle';
 // import Swiper and modules styles
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+// import 'swiper/css/bundle';
+import { flip } from 'lodash';
 
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-	// configure Swiper to use modules
-	direction: 'vertical',
+const swiper = new Swiper(".swiper", {
+	speed: 800,
+	parallax: true,
 	loop: true,
-
+	autoplay: {
+		delay: 8000,
+	},
 	pagination: {
-		el: '.swiper-pagination',
+		el: ".swiper-pagination",
+		clickable: true
 	},
-
-	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev"
+	}
 });
