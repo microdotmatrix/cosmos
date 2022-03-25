@@ -25,6 +25,7 @@
         "webpack-dev-server": "^4.7.4"
     },
     "dependencies": {
-        "@waaark/luge": "^0.6.7-beta"
+        "@waaark/luge": "^0.6.7-beta",
+        "swiper": "^8.0.7"
     }
 }

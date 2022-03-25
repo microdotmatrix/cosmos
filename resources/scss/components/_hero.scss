@@ -7,14 +7,18 @@
 	height: 80vh;
 	overflow: hidden;
    &__wrapper {
-		position: absolute;
-      flex-wrap: wrap;
+		flex-wrap: wrap;
       align-items: center;
    }
    &__content {
+		position: absolute;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+		> h1 {
+			font-family: $unifraktur;
+			margin-left: $space-phi;
+		}
    }
    &__image {
       position: relative;

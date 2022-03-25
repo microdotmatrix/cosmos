@@ -13,7 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
 	.sass('resources/scss/main.scss', 'public/css')
-	.browserSync('http://localhost:3000')
+	.browserSync('http://localhost:8000')
 	.postCss('resources/css/app.css', 'public/css', [
 		//
 	]);
