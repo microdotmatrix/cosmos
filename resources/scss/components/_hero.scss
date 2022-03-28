@@ -1,7 +1,7 @@
 .hero {
 	display: none;
 	align-items: center;
-	padding: #{$pi}rem 0;
+	//padding: #{$pi}rem 0;
 	position: relative;
 	background: _slate(6);
 	height: 80vh;
@@ -35,12 +35,12 @@
 	}
 }
 
-.swiper {
+.home-slider {
 	position: relative;
 	width: 100%;
 	height: 80vh;
 	@include loadify(0.5s, 1.25s);
-	.swiper-slide {
+	.sw-slide {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
@@ -53,11 +53,28 @@
 		-webkit-background-size: cover;
 		background-size: 100%;
 		background-position: 0 0;
+		filter: blur(12px);
+		animation-name: blur-fadeIn;
+		animation-duration: 2s;
+		animation-delay: 300ms;
+		animation-timing-function: ease(out-sine);
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+}
+
+@keyframes blur-fadeIn {
+	0% {
+		filter: blur(0);
+		transform: scale3d(1, 1, 1);
+	}
+	100% {
+		filter: blur(12px);
+		transform: scale3d(1.01, 1.01, 2);
 	}
 }
 
 .slide__box {
-	@include loadify(1s, 0.75s);
 	padding: $space-e $space-phi;
 	p {
 		font-family: $uni-sans;
@@ -67,8 +84,7 @@
 .slide__image {
 	position: relative;
 	overflow: hidden;
-	clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-	@include loadify(1.4s, 0.75s);
+	clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
 	> img {
 		position: absolute;
 		width: 100%;
@@ -76,5 +92,8 @@
 		object-fit: cover;
 		object-position: center;
 		transform-style: preserve-3d;
+	}
+	.jarallax-img {
+		object-position: 25% 50% !important;
 	}
 }

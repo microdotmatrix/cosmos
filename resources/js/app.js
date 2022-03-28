@@ -19,19 +19,57 @@ import Swiper from 'swiper/bundle';
 // import 'swiper/css/bundle';
 import { flip } from 'lodash';
 
-const swiper = new Swiper(".swiper", {
-	speed: 800,
+const swiper = new Swiper(".sw", {
+	containerModifierClass: 'sw-',
+	slideActiveClass: 'sw-slide-active',
+	slideBlankClass: 'sw-slide-invisible-blank',
+	slideClass: 'sw-slide',
+	slideDuplicateClass: 'sw-slide-duplicate',
+	slideDuplicateNextClass: 'sw-slide-duplicate-next',
+	slideDuplicatePrevClass: 'sw-slide-duplicate-prev',
+	slideDuplicateActiveClass: 'sw-slide-duplicate-active',
+	slideNextClass: 'sw-slide-next',
+	slidePrevClass: 'sw-slide-prev',
+	slideVisibleClass: 'sw-slide-visible',
+	speed: 1200,
 	parallax: true,
 	loop: true,
 	autoplay: {
-		delay: 8000,
+		delay: 6000,
 	},
 	pagination: {
-		el: ".swiper-pagination",
+		el: ".sw-pagination",
 		clickable: true
 	},
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev"
-	}
+		nextEl: ".sw-button-next",
+		prevEl: ".sw-button-prev"
+	},
+	effect: 'creative',
+	creativeEffect: {
+		prev: {
+			origin: "left center",
+			translate: ["-0.5%", "1%", -200],
+			scale: 0.98,
+		},
+		next: {
+			origin: "left center",
+			translate: ["10%", "1%", -50],
+			scale: 1.1,
+			opacity: 0.5,
+		 },
+
+	},
 });
+
+
+// GSAP Animations
+var tween = gsap.from(".gs-01", {
+	duration: 2,
+	delay: 1.2,
+	x: 20,
+	scale: 1.08,
+	transformOrigin: "right top",
+	opacity: 0,
+	ease: "sine.out"
+ });
