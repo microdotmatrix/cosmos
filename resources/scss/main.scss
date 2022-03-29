@@ -8,7 +8,7 @@
 @import "core/flex-grid";
 
 @import "config/reset";
-@import "config/normalize";
+@import "config/sanitize";
 
 @import "utilities/layout";
 @import "utilities/transitions";
@@ -22,3 +22,5 @@
 
 @import "toolkit/swiper/sw";
 @import "toolkit/jarallax/jarallax";
+
+@import "utilities/gradients";

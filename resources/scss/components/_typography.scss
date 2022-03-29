@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5 {
-	font-family: $advent;
+	font-family: $uni-sans-bold;
 	font-weight: 500;
 	line-height: 1;
 	margin-top: clamp(#{$phi}rem, 3.14vw, #{$pi}rem);
@@ -8,6 +8,14 @@ h1, h2, h3, h4, h5 {
 	transition: all 200ms ease;
 	@include only(first) {
 		margin-top: 0;
+	}
+	&.sub {
+		margin-top: 0.5rem;
+		margin-bottom: 0.25rem;
+		color: ocGray(6);
+		font-family: $uni-sans;
+		font-weight: 800;
+		line-height: 1.303;
 	}
 }
 

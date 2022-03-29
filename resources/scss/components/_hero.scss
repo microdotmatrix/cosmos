@@ -1,10 +1,9 @@
 .hero {
-	display: none;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	//padding: #{$pi}rem 0;
 	position: relative;
-	background: _slate(6);
-	height: 80vh;
 	overflow: hidden;
 	&__wrapper {
 		flex-wrap: wrap;
@@ -24,6 +23,8 @@
 		// clip-path: polygon(16% 0, 100% 16%, 95% 88%, 0% 100%);
 		clip-path: polygon(0% 16%, 100% 0%, 100% 100%, 0 94%);
 		> img {
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
 	}

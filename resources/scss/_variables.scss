@@ -61,7 +61,7 @@ $uni-sans-bold: 		 'Uni Sans Heavy', sans-serif;
 $lighters: 				 'Lighters', sans-serif;
 
 $text-root__size:     112.8%;
-$text-root__line:     1.618rem;
+$text-root__line:     1.618;
 $text-color:          var(--color-text);
 $text-font:           $kanit;
 $text-size:           var(--base);
@@ -107,3 +107,11 @@ $header-bg__color:    _slate(8);
 
 $footer-pt:           var(--footer-pt);
 $footer-pb:           var(--footer-pb);
+
+$gr-dark-fade:        linear-gradient(to right, #434343 0%, black 100%);
+$gr-cool-grey:        linear-gradient(60deg, #29323c 0%, #485563 100%);
+$gr-blue-night:       linear-gradient(to right, #243949 0%, #517fa4 100%);
+$gr-slate-gray:       linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+$gr-metallic-fade:    linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+$gr-sunset-purple:    linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+$gr-morpheus:         linear-gradient(to top, #30cfd0 0%, #330867 100%);

@@ -116,4 +116,14 @@ $grid-columns: 6;
    }
 }
 
+[data-gutter="x"] {
+	padding: 0 $space-phi;
+}
 
+[data-gutter="y"] {
+	padding: calc(#{$space-e} / 2) 0;
+}
+
+[data-gutter="x/y"] {
+	padding: calc(#{$space-e} / 2) $space-phi;
+}
