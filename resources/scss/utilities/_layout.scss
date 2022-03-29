@@ -6,7 +6,7 @@
 // breakpoints and widths of your container with whatever gutter width you plug into it.
 // -----
 
-.container {
+.src-container {
    @include adaptive(calc(#{$space-pi} / #{$e}));
    max-width: $content-width;
 }

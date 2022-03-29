@@ -950,27 +950,27 @@ textarea,
   cursor: default;
 }
 
-.container {
+.src-container {
   margin: 0 auto;
   max-width: var(--content-width);
 }
 @media (min-width: 768px) {
-  .container {
+  .src-container {
     max-width: calc(768px - (calc(var(--space-pi) / 2.71828) * 2));
   }
 }
 @media (min-width: 1024px) {
-  .container {
+  .src-container {
     max-width: calc(1024px - (calc(var(--space-pi) / 2.71828) * 2));
   }
 }
 @media (min-width: 1280px) {
-  .container {
+  .src-container {
     max-width: calc(1280px - (calc(var(--space-pi) / 2.71828) * 2));
   }
 }
 @media (min-width: 1440px) {
-  .container {
+  .src-container {
     max-width: calc(1440px - (calc(var(--space-pi) / 2.71828) * 2));
   }
 }
